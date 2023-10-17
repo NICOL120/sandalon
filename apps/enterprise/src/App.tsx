@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { GlobalStyle } from 'lib/ui/GlobalStyle';
 import { TransactionErrorProvider } from 'chain/components/TransactionErrorProvider';
 import { PersonalizationProvider } from 'libs/personalization/PersonalizationProvider';
-import { setupErrorMonitoring } from 'errors/errorMonitoring';
 import { AppRoutes } from 'navigation/AppRoutes';
 import { GlobalErrorBoundary } from 'errors/components/GlobalErrorBoundary';
 import { TransactionsProvider } from 'chain/transactions';
@@ -41,9 +40,6 @@ const AppProviders = () => {
     </ThemeProvider>
   );
 };
-
-setupErrorMonitoring();
-
 const App = () => {
   return <AppProviders />;
 };
