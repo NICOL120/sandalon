@@ -2648,7 +2648,7 @@ __metadata:
     "@aws-sdk/util-dynamodb": ^3.159.0
     "@terra-money/feather.js": ^1.0.4
     "@types/d3-array": ^3.0.3
-    "@types/memoizee": ^0.4.8
+    "@types/memoizee": ^0.4.9
     "@types/node": ^16.11.56
     aws-lambda: ^1.0.7
     axios: ^1.4.0
@@ -4766,10 +4766,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/memoizee@npm:^0.4.8":
-  version: 0.4.8
-  resolution: "@types/memoizee@npm:0.4.8"
-  checksum: fec135ca84426fc22aa69061c62c7139647c87a84b04d9b7abeb6a85dff334ebe901280c315728c096c931a723427b9a8abc52c54546745665b5107146b6b3ba
+"@types/memoizee@npm:^0.4.9":
+  version: 0.4.9
+  resolution: "@types/memoizee@npm:0.4.9"
+  checksum: afdbd8426f6d3739473ef73174d078d0f2a670c49dc9e19b4382b956b3b39ccba4e2fdbde471ff6d00e8fb21010dc5d13fb766fd4f5c894d81ef0a4e1753b9b3
   languageName: node
   linkType: hard
 
