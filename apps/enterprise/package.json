@@ -42,7 +42,7 @@
     "big.js": "^6.2.1",
     "classnames": "^2.3.1",
     "date-fns": "^2.29.3",
-    "focus-trap-react": "^9.0.2",
+    "focus-trap-react": "^10.2.3",
     "json-schema-to-typescript": "^11.0.2",
     "lodash": "^4.17.21",
     "notistack": "^3.0.1",
