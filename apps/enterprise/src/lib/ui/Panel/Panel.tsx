@@ -11,8 +11,8 @@ export interface PanelProps {
 
 export const Panel = styled.div<PanelProps>`
   position: relative;
-  width: 190px;
-  height: 254px;
+  width: ${({ width }) => width || '190px'};
+  height: ${({ height }) => height || '254px'};
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -35,8 +35,8 @@ export const Panel = styled.div<PanelProps>`
         inset: 0;
         left: -5px;
         margin: auto;
-        width: 200px;
-        height: 264px;
+        width: ${({ width }) => width || '200px'};
+        height: ${({ height }) => height || '264px'};
         border-radius: 10px;
         background: ${contentBackground};
         z-index: -10;
