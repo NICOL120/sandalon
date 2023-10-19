@@ -1,58 +1,83 @@
 import styled, { css } from 'styled-components';
 
-import { defaultBorderRadiusCSS } from '../borderRadius';
-import { getCSSUnit } from '../utils/getCSSUnit';
-import { match } from 'lib/shared/utils/match';
-import { getColor } from '../theme/getters';
-
 type PanelKind = 'regular' | 'secondary';
 
 export interface PanelProps {
   width?: React.CSSProperties['width'];
   padding?: React.CSSProperties['padding'];
-  direction?: React.CSSProperties['flexDirection'];
-
   kind?: PanelKind;
-
   withSections?: boolean;
 }
 
-const panelPaddingCSS = css<{ padding?: React.CSSProperties['padding'] }>`
-  padding: ${({ padding }) => getCSSUnit(padding || 20)};
-`;
-
 export const Panel = styled.div<PanelProps>`
-  ${defaultBorderRadiusCSS};
-  width: ${({ width }) => (width ? getCSSUnit(width) : undefined)};
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
   overflow: hidden;
 
-  ${({ withSections, direction = 'column', kind = 'regular', theme }) => {
-    const contentBackground = match(kind, {
-      secondary: () => theme.colors.background.toCssValue(),
-      regular: () => theme.colors.mist.toCssValue(),
-    });
+  ${({ withSections, kind }) => {
+    const contentBackground = kind === 'secondary' ? 'linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%)' : 'linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%)';
+    const border = kind === 'secondary' ? '2px solid #e81cff' : '';
 
-    const contentCSS = css`
-      ${panelPaddingCSS}
-      background: ${contentBackground};
+    return css`
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        left: -5px;
+        margin: auto;
+        width: 200px;
+        height: 264px;
+        border-radius: 10px;
+        background: ${contentBackground};
+        z-index: -10;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        background: ${contentBackground};
+        transform: translate3d(0, 0, 0) scale(0.95);
+        filter: blur(20px);
+      }
+
+      ${border}
+
+      .heading {
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+
+      p:not(.heading) {
+        font-size: 14px;
+      }
+
+      p:last-child {
+        color: #e81cff;
+        font-weight: 600;
+      }
+
+      &:hover::after {
+        filter: blur(30px);
+      }
+
+      &:hover::before {
+        transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+      }
     `;
-
-    return withSections
-      ? css`
-          display: flex;
-          flex-direction: ${direction};
-          gap: 1px;
-
-          > * {
-            ${contentCSS}
-          }
-        `
-      : contentCSS;
   }}
-
-  ${({ kind }) =>
-    kind === 'secondary' &&
-    css`
-      border: 2px solid ${getColor('mist')};
-    `}
 `;
