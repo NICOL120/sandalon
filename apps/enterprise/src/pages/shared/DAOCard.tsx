@@ -33,7 +33,6 @@ const Container = styled(Panel)`
   ${defaultTransitionCSS};
   &:hover {
     background: ${getColor('mistExtra')};
-    transform: perspective(1000px) rotateY(10deg);
   }
 `;
 
