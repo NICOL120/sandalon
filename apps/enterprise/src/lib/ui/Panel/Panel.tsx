@@ -52,7 +52,7 @@ export const Panel = styled.div<PanelProps>`
         inset: 0;
         background: ${contentBackground};
         transform: translate3d(0, 0, 0) scale(0.95);
-        filter: blur(1px);
+        filter: blur(10px);
       }
 
       ${border}
