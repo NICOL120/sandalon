@@ -4,8 +4,8 @@ import { sharedColors } from './shared';
 import { generateLabelColorGetter } from '../colors/generateLabelColorGetter';
 
 const backgroundHue = 60;
-const backgroundSaturation = 100;
-const backgroundLightness = 50;
+const backgroundSaturation = 28;
+const backgroundLightness = 0;
 const backgroundAlpa = 0.19;
 
 export const darkTheme: DefaultTheme = {
