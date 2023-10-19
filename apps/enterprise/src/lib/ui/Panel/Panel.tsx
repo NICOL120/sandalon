@@ -4,6 +4,7 @@ type PanelKind = 'regular' | 'secondary';
 
 export interface PanelProps {
   width?: React.CSSProperties['width'];
+  height?: React.CSSProperties['height'];
   padding?: React.CSSProperties['padding'];
   kind?: PanelKind;
   withSections?: boolean;
