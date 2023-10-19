@@ -1,4 +1,3 @@
-import { GradientBackground, GradientAnimation } from './gradient'; // Ganti dengan path file yang sesuai
 import { DefaultTheme } from 'styled-components';
 import { HSLA } from 'lib/ui/colors/HSLA';
 import { sharedColors } from './shared';
@@ -24,7 +23,8 @@ export const darkTheme: DefaultTheme = {
     textShy: new HSLA(0, 0, 100, 0.28),
 
     mist: new HSLA(0, 0, 100, 0.06),
-    mistExtra: new HSLA(0, 0, 0, 0, GradientBackground),
+    mistExtra: new HSLA(0, 0, 100, 0.13),
+
     overlay: new HSLA(backgroundHue, backgroundSaturation, 1, 0.8),
 
     getLabelColor: generateLabelColorGetter({
@@ -34,12 +34,8 @@ export const darkTheme: DefaultTheme = {
 
     contrast: new HSLA(0, 0, 100),
   },
-  animations: {
-    gradientAnimation: GradientAnimation, // Menggunakan animasi gradien
-    // ... (properti animasi lainnya)
-  },
   shadows: {
     small: 'rgb(248 231 23 / 20%) 0px 0px 0px 1px, rgb(248 231 23 / 20%) 0px 2px 4px',
-    medium: 'rgb(248 231 23 / 10%) 0px 0px 0px 1px, rgb(248 231 23 / 20%) 0px 3px 6px, rgb(248 231 23 / 40%) 0px 9px 24px',
+    medium: 'rgb(248 231 23 / 10%) 0px 0px 0px 1px, rgb(248 231 23 / 20%) 0px 3px 6px, rgb(248 231 23 / 40%) 0px 9px 24px;',
   },
 };
