@@ -17,7 +17,16 @@ import { InternalLink } from 'lib/navigation/Link/InternalLink';
 import { getDaoPath } from 'navigation';
 import { croppedTextCSS } from 'lib/ui/utils/croppedTextCSS';
 
-// Tambahkan kode CSS latar belakang gradient
+interface DAOCardProps {
+  dao: DAO;
+}
+
+const daoTypeName: Record<enterprise.DaoType, string> = {
+  multisig: 'Multisig',
+  nft: 'NFT',
+  token: 'Token',
+};
+
 const Container = styled(Panel)`
   width: 100%;
   cursor: pointer;
@@ -25,15 +34,8 @@ const Container = styled(Panel)`
   &:hover {
     background: ${getColor('mistExtra')};
   }
-
-  &.gradient-background {
-    background: linear-gradient(275deg, white, #040404, #f8e806);
-    background-size: 180% 180%;
-    animation: gradient-animation 30s ease infinite;
-  }
 `;
 
-// Sisanya adalah sama seperti kode sebelumnya
 const Content = styled(HStack)`
   ${croppedTextCSS};
 `;
@@ -48,7 +50,7 @@ export const DAOCard = (props: DAOCardProps) => {
       <ActionInsideInteractiveElement
         render={({ actionSize }) => (
           <InternalLink style={{ width: '100%' }} to={getDaoPath(dao.address)}>
-            <Container className="gradient-background">
+            <Container>
               <HStack gap={20} alignItems="center" justifyContent="space-between">
                 <Content alignItems="center" gap={20}>
                   <DAOLogo logo={dao.logo} />
