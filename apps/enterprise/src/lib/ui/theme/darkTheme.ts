@@ -23,7 +23,7 @@ export const darkTheme: DefaultTheme = {
     textSupporting: new HSLA(0, 0, 61),
     textShy: new HSLA(0, 0, 100, 0.28),
 
-    mist: new HSLA(56, 93, 52, 0.6),
+    mist: new HSLA(233, 100, 9, 0.66),
     mistExtra: new HSLA(55, 93, 52, 0.6),
 
     overlay: new HSLA(backgroundHue, backgroundSaturation, 1, 0.8),
