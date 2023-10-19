@@ -24,7 +24,7 @@ export const darkTheme: DefaultTheme = {
     textShy: new HSLA(0, 0, 100, 0.28),
 
     mist: new HSLA(0, 0, 100, 0.06),
-    mistExtra: GradientBackground, // Menggunakan komponen gradien sebagai nilai mistExtra
+    mistExtra: new HSLA(0, 0, 0, 0, GradientBackground),
     overlay: new HSLA(backgroundHue, backgroundSaturation, 1, 0.8),
 
     getLabelColor: generateLabelColorGetter({
