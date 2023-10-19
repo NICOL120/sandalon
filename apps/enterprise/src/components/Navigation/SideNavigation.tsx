@@ -42,7 +42,6 @@ export const SideNavigation = () => {
         </VStack>
       </VStack>
       <VStack gap={24} alignItems="center">
-        <ThemeToggleButton />
         <Tooltip
           content="Got feedback?"
           placement="right"
