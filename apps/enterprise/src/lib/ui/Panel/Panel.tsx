@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import { getCSSUnit } from '../utils/getCSSUnit';
 type PanelKind = 'regular' | 'secondary';
 
 export interface PanelProps {
@@ -11,8 +11,8 @@ export interface PanelProps {
 
 export const Panel = styled.div<PanelProps>`
   position: relative;
-  width: ${({ width }) => width || '190px'};
-  height: ${({ height }) => height || '254px'};
+  width: ${({ width }) => (width ? getCSSUnit(width) : undefined)};
+  height: ${({ height }) => (height ? getCSSUnit(width) : undefined)};
   background-color: #000;
   display: flex;
   flex-direction: column;
