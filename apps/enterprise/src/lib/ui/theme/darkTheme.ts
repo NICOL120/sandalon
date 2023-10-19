@@ -3,9 +3,10 @@ import { HSLA } from 'lib/ui/colors/HSLA';
 import { sharedColors } from './shared';
 import { generateLabelColorGetter } from '../colors/generateLabelColorGetter';
 
-const backgroundHue = 0;
-const backgroundSaturation = 0;
-const backgroundLightness = 10;
+const backgroundHue = 60;
+const backgroundSaturation = 100;
+const backgroundLightness = 50;
+const backgroundAlpa = 1;
 
 export const darkTheme: DefaultTheme = {
   name: 'dark',
@@ -16,8 +17,8 @@ export const darkTheme: DefaultTheme = {
     alert: new HSLA(0, 79, 63),
     idle: new HSLA(32, 79, 48),
 
-    foreground: new HSLA(backgroundHue, backgroundSaturation, backgroundLightness + 3),
-    background: new HSLA(backgroundHue, backgroundSaturation, backgroundLightness),
+    foreground: new HSLA(backgroundHue, backgroundSaturation, backgroundLightness + 3, backgroundAlpa),
+    background: new HSLA(backgroundHue, backgroundSaturation, backgroundLightness, backgroundAlpa),
     text: new HSLA(0, 0, 100, 0.81),
     textSupporting: new HSLA(0, 0, 61),
     textShy: new HSLA(0, 0, 100, 0.28),
