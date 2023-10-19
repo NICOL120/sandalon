@@ -35,7 +35,7 @@ export const darkTheme: DefaultTheme = {
     contrast: new HSLA(0, 0, 100),
   },
   shadows: {
-    small: 'rgb(15 15 15 / 20%) 0px 0px 0px 1px, rgb(15 15 15 / 20%) 0px 2px 4px',
-    medium: 'rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 20%) 0px 3px 6px, rgb(15 15 15 / 40%) 0px 9px 24px;',
+    small: 'rgb(248 231 23 / 20%) 0px 0px 0px 1px, rgb(248 231 23 / 20%) 0px 2px 4px',
+    medium: 'rgb(248 231 23 / 10%) 0px 0px 0px 1px, rgb(248 231 23 / 20%) 0px 3px 6px, rgb(248 231 23 / 40%) 0px 9px 24px;',
   },
 };
