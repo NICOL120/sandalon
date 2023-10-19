@@ -35,8 +35,8 @@ export const Panel = styled.div<PanelProps>`
         inset: 0;
         left: -5px;
         margin: auto;
-        width: ${({ width }) => width || '200px'};
-        height: ${({ height }) => height || '264px'};
+        width: ${({ width }) => (width ? getCSSUnit(width) : undefined)};
+        height: ${({ height }) => (height ? getCSSUnit(width) : undefined)};
         border-radius: 10px;
         background: ${contentBackground};
         z-index: -10;
