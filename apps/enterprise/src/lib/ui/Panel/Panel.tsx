@@ -19,7 +19,7 @@ export const Panel = styled.div<PanelProps>`
   justify-content: flex-end;
   padding: 12px;
   gap: 12px;
-  border-radius: 70px;
+  border-radius: 30px;
   cursor: pointer;
   color: white;
   overflow: hidden;
