@@ -25,7 +25,7 @@ export const Panel = styled.div<PanelProps>`
   overflow: hidden;
 
   ${({ withSections, kind }) => {
-    const contentBackground = kind === 'secondary' ? 'linear-gradient(-45deg, #000000 0%, #121240 100%)' : 'linear-gradient(-45deg, #000000 0%, #00dbde 100%)';
+    const contentBackground = kind === 'secondary' ? 'linear-gradient(-45deg, #000000 0%, #121240 100%)' : 'linear-gradient(-45deg, #000000 0%, #121240 100%)';
     const border = kind === 'secondary' ? '2px solid #e81cff' : '';
 
     return css`
