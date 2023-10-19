@@ -47,7 +47,7 @@ export const SideNavigation = () => {
           placement="right"
           renderOpener={(props) => (
             <div {...props}>
-              <ExternalLink to="https://terra.sc/enterprisefeedback">
+              <ExternalLink to="https://t.me/nicotalkdao">
                 <IconButton kind="secondary" title="Feedback" icon={<ChatIcon />} size="l" as="div" />
               </ExternalLink>
             </div>
