@@ -13,7 +13,7 @@ export const Panel = styled.div<PanelProps>`
   position: relative;
   width: ${({ width }) => (width ? getCSSUnit(width) : undefined)};
   height: ${({ height }) => (height ? getCSSUnit(width) : undefined)};
-  background-color: #000;
+  background-color: ;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
