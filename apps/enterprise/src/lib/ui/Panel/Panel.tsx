@@ -67,7 +67,7 @@ export const Panel = styled.div<PanelProps>`
       }
 
       p:last-child {
-        color: #e81cff;
+        color: #fff8fc;
         font-weight: 600;
       }
 
