@@ -12,7 +12,7 @@ export interface PanelProps {
 export const Panel = styled.div<PanelProps>`
   position: relative;
   width: ${({ width }) => (width ? getCSSUnit(width) : undefined)};
-  height: ${({ height }) => (height ? getCSSUnit(width) : undefined)};
+  height: ${({ height }) => (height ? getCSSUnit(height) : undefined)};
   background-color: ;
   display: flex;
   flex-direction: column;
